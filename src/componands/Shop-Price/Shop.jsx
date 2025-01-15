@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid, Button, Typography, Container } from "@mui/material";
 
 function ShopPrice() {
@@ -13,15 +13,20 @@ function ShopPrice() {
     "Above 150,000",
   ];
 
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleClick = (index) => {
+    setActiveIndex(index);
+  };
+
   return (
     <Container
       style={{
-        backgroundColor: "#e5e7eb", // Light gray background
-        padding: "20px 20px 0 20px", // Top and horizontal padding only, no bottom padding
-        marginTop: "100px", // Adjusted margin for top space
+        backgroundColor: "#e5e7eb",
+        padding: "20px 20px 0 20px", 
+        marginTop: "300px", 
       }}
     >
-      {/* Header Section */}
       <div
         style={{
           maxWidth: "1000px",
@@ -34,7 +39,7 @@ function ShopPrice() {
             justifyContent: "space-between",
             alignItems: "center",
             marginBottom: "30px",
-            marginTop: "200px",
+            marginTop: "50px", 
           }}
         >
           <Typography variant="h5" style={{ fontWeight: "bold" }}>
@@ -47,8 +52,6 @@ function ShopPrice() {
             View All
           </Button>
         </div>
-
-        {/* Grid Section for Price Ranges */}
         <Grid container spacing={2}>
           {priceRanges.map((range, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
@@ -56,20 +59,26 @@ function ShopPrice() {
                 fullWidth
                 variant="contained"
                 sx={{
-                  backgroundColor: "#ffeb3b",
-                  color: "#000", // Text starts as black
+                  backgroundColor:
+                    activeIndex === index ? "#1976d2" : "#ffeb3b",
+                  color: "#000", 
                   position: "relative",
                   overflow: "hidden",
                   textTransform: "none",
                   padding: "10px",
                   fontWeight: "bold",
-                  zIndex: 1, // Text stays above the pseudo-element
-                  transition: "background-color 0.3s ease-in-out", // Smooth transition for background color
+                  zIndex: 1, 
+                  transition: "transform 0.3s ease-in-out, background-color 0.3s ease", 
                   "&:hover": {
-                    backgroundColor: "#87CEEB", // Sky blue on hover
-                    color: "#fff", // Change text color to white on hover
+                    backgroundColor: "#1976d2", 
+                    color: "#fff", 
+                    transform: "translateY(-10px)", 
+                  },
+                  "&:active": {
+                    transform: "translateY(-10px)", 
                   },
                 }}
+                onClick={() => handleClick(index)} 
               >
                 {range}
               </Button>

@@ -18,7 +18,6 @@ const MyAccount = () => {
   return (
     <Box className="bg-slate-100 pt-7 pb-5">
       <Box className="bg-[#48AFFF] flex justify-between px-5 relative py-5">
-        {/* left side */}
 
         <Box className="py-10 flex gap-2 items-center">
           <IconButton
@@ -46,8 +45,6 @@ const MyAccount = () => {
             </Typography>
           </Box>
         </Box>
-
-        {/* right side */}
         <Box className="flex flex-col items-end mt-5">
           <FontAwesomeIcon className="text-white text-2xl" icon={faGear} />
           <Box class="h-[40%] overflow-hidden absolute bottom-0 right-0">

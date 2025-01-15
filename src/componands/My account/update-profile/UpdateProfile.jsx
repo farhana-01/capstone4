@@ -32,7 +32,6 @@ const navigate = useNavigate();
   return (
     <Box className="h-[90vh] bg-slate-100 flex justify-center">
     <Box className="w-full mx-3 md:mx-14 lg:w-1/2 mt-20">
-      {/* Navbar */}
       <AppBar
         position="static"
         className="py-2"
@@ -47,8 +46,6 @@ const navigate = useNavigate();
           </Typography>
         </Toolbar>
       </AppBar>
-
-      {/* Edit Profile Form */}
       <Box className="mt-7 bg-white p-5">
         <form onSubmit={handleSubmit(updateProfileHandler)}>
           <Box className="my-3">

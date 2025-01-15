@@ -39,11 +39,8 @@ const SignIn = () => {
     }
 
   };
-
-  
   return (
     <>
-     
       <Box className="bg-slate-100 h-[89vh] sm:h-[92vh] md:h-[92vh] lg:h-[95vh] xl:h-[91vh]">
       <ToastContainer />
         <Box className="flex flex-col w-full justify-center items-center pt-14">

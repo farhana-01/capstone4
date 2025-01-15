@@ -143,9 +143,6 @@ const OrderDelivery = () => {
           </form>
         </Box>
       </Box>
-
-
-{/* Modal for Order Success */}
 <Modal
   open={isModalOpen}
   onClose={closeModal}

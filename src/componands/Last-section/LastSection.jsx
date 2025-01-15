@@ -30,10 +30,10 @@ const InlineImagesSection = () => {
   return (
     <Box
       style={{
-        backgroundColor: '#ffffff', // Full-width background
+        backgroundColor: '#ffffff', 
         marginTop: '400px',
-        width: '100%', // Ensures full width
-        padding: '20px 0', // Vertical padding
+        width: '100%', 
+        padding: '20px 0', 
       }}
     >
       <Container>
@@ -46,7 +46,7 @@ const InlineImagesSection = () => {
               md={3}
               className="d-flex flex-column align-items-center"
               style={{
-                textAlign: 'center', // Ensure alignment for all text
+                textAlign: 'center',
               }}
             >
               <img
@@ -56,14 +56,14 @@ const InlineImagesSection = () => {
                   width: '80px',
                   height: '80px',
                   objectFit: 'cover',
-                  marginBottom: '15px', // Spacing between the image and heading
+                  marginBottom: '15px', 
                 }}
               />
               <h5
                 style={{
                   fontSize: '16px',
-                  margin: '0', // Remove default margin
-                  marginBottom: '5px', // Add spacing below heading
+                  margin: '0', 
+                  marginBottom: '5px', 
                 }}
               >
                 {image.heading}

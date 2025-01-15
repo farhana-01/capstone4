@@ -10,7 +10,6 @@ const Footer = () => {
   return (
     <>
      <Box style={{ marginTop: "10px" }} className="bg-footer">
-         {/* Add margin at the top */}
       <Box  sx={{ marginTop: "20px" }}>
         <Box className="container mx-auto">
           <Box className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 text-white cursor-pointer py-12 ms-5">

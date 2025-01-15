@@ -1,36 +1,28 @@
 import React, { useState } from 'react';
 import { Modal, Button } from '@mui/material';
-import 'tailwindcss/tailwind.css'; // Import Tailwind CSS
-import { Swiper, SwiperSlide } from 'swiper/react'; // Import Swiper components
-import 'swiper/css'; // Import Swiper CSS
+import 'tailwindcss/tailwind.css';
+import { Swiper, SwiperSlide } from 'swiper/react'; 
+import 'swiper/css'; 
+import CheckCircleIcon from '@mui/icons-material/CheckCircle'; 
 
 const ImgModal = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [popupData, setPopupData] = useState({ src: "", name: "", description: "" });
+  const [popupData, setPopupData] = useState({ src: "", name: "", description: "", quantity: 0 });
 
   const images = [
-    { src: "https://images.priceoye.pk/review/7555/1540124-hopti-270x270.jpg", name: "Image 1", description: "This is image 1" },
-    { src: "https://images.priceoye.pk/review/7710/1539172-oc1re-270x270.jpg", name: "Image 2", description: "This is image 2" },
-    { src: "https://images.priceoye.pk/review/9969/1525458-dr4ho-270x270.jpg", name: "Image 3", description: "This is image 3" },
-    { src: "https://images.priceoye.pk/review/5045/412133-8aynf-270x270.jpg", name: "Image 4", description: "This is image 4" },
-    { src: "https://images.priceoye.pk/review/7908/1530725-ku80p-270x270.jpg", name: "Image 5", description: "This is image 5" },
-    { src: "https://images.priceoye.pk/review/8249/1499370-rluq9-270x270.jpg", name: "Image 6", description: "This is image 6" },
-    { src: "https://images.priceoye.pk/review/7802/1501120-tz4hd-270x270.jpg", name: "Image 7", description: "This is image 7" },
-    { src: "https://images.priceoye.pk/review/9434/1479225-rel5k-270x270.jpg", name: "Image 8", description: "This is image 8" },
-    { src: "https://images.priceoye.pk/review/7710/1530896-0ofrw-270x270.jpg", name: "Image 9", description: "This is image 9" },
-    { src: "https://images.priceoye.pk/review/7555/1540124-hopti-270x270.jpg", name: "Image 1", description: "This is image 1" },
-    { src: "https://images.priceoye.pk/review/7710/1539172-oc1re-270x270.jpg", name: "Image 2", description: "This is image 2" },
-    { src: "https://images.priceoye.pk/review/9969/1525458-dr4ho-270x270.jpg", name: "Image 3", description: "This is image 3" },
-    { src: "https://images.priceoye.pk/review/5045/412133-8aynf-270x270.jpg", name: "Image 4", description: "This is image 4" },
-    { src: "https://images.priceoye.pk/review/7908/1530725-ku80p-270x270.jpg", name: "Image 5", description: "This is image 5" },
-    { src: "https://images.priceoye.pk/review/8249/1499370-rluq9-270x270.jpg", name: "Image 6", description: "This is image 6" },
-    { src: "https://images.priceoye.pk/review/7802/1501120-tz4hd-270x270.jpg", name: "Image 7", description: "This is image 7" },
-    { src: "https://images.priceoye.pk/review/9434/1479225-rel5k-270x270.jpg", name: "Image 8", description: "This is image 8" },
-    { src: "https://images.priceoye.pk/review/7710/1530896-0ofrw-270x270.jpg", name: "Image 9", description: "This is image 9" },
+    { src: "https://images.priceoye.pk/review/7555/1540124-hopti-270x270.jpg", name: "Samsung Galaxy S22", description: "Latest flagship with an awesome display.", quantity: 10 },
+    { src: "https://images.priceoye.pk/review/7710/1539172-oc1re-270x270.jpg", name: "iPhone 13", description: "Experience Apple’s premium quality.", quantity: 5 },
+    { src: "https://images.priceoye.pk/review/9969/1525458-dr4ho-270x270.jpg", name: "OnePlus 9 Pro", description: "Great performance with a sleek design.", quantity: 8 },
+    { src: "https://images.priceoye.pk/review/5045/412133-8aynf-270x270.jpg", name: "Google Pixel 6", description: "Pure Android experience with excellent camera.", quantity: 6 },
+    { src: "https://images.priceoye.pk/review/7908/1530725-ku80p-270x270.jpg", name: "Xiaomi Mi 11", description: "Affordable flagship with a powerful processor.", quantity: 12 },
+    { src: "https://images.priceoye.pk/review/8249/1499370-rluq9-270x270.jpg", name: "Oppo Reno 6", description: "Sleek design and great camera performance.", quantity: 7 },
+    { src: "https://images.priceoye.pk/review/7802/1501120-tz4hd-270x270.jpg", name: "Realme GT", description: "Flagship performance at a budget price.", quantity: 15 },
+    { src: "https://images.priceoye.pk/review/9434/1479225-rel5k-270x270.jpg", name: "Vivo V21", description: "Good balance of performance and camera quality.", quantity: 20 },
+    { src: "https://images.priceoye.pk/review/7710/1530896-0ofrw-270x270.jpg", name: "Samsung A52", description: "Mid-range smartphone with solid features.", quantity: 25 },
   ];
 
-  const openPopup = (src, name, description) => {
-    setPopupData({ src, name, description });
+  const openPopup = (src, name, description, quantity) => {
+    setPopupData({ src, name, description, quantity });
     setIsPopupOpen(true);
   };
 
@@ -40,17 +32,21 @@ const ImgModal = () => {
 
   return (
     <div className="container mx-auto mt-5">
-      {/* First SwiperJS Slider */}
+      <div className="text-center mb-8">
+        <h2 className="text-2xl font-bold">Customer Reviews</h2>
+        <p className="text-gray-600 mt-2">
+          What our Customers say about Priceoye.pk
+        </p>
+      </div>
       <div className="max-w-6xl mx-auto">
-        
         <Swiper
           spaceBetween={10}
-          slidesPerView={9} // Show 9 slides at a time
+          slidesPerView={9} 
           breakpoints={{
-            320: { slidesPerView: 3 }, // 3 slides on very small screens
-            640: { slidesPerView: 5 }, // 5 slides on small screens
-            1024: { slidesPerView: 7 }, // 7 slides on medium screens
-            1280: { slidesPerView: 9 }, // 9 slides on large screens
+            320: { slidesPerView: 3 }, 
+            640: { slidesPerView: 5 }, 
+            1024: { slidesPerView: 7 }, 
+            1280: { slidesPerView: 9 }, 
           }}
           className="my-5"
         >
@@ -59,15 +55,13 @@ const ImgModal = () => {
               <img
                 src={image.src}
                 alt={image.name}
-                className="w-full h-16 object-cover rounded-lg cursor-pointer" // Smaller image size
-                onClick={() => openPopup(image.src, image.name, image.description)}
+                className="w-full h-16 object-cover rounded-lg cursor-pointer" 
+                onClick={() => openPopup(image.src, image.name, image.description, image.quantity)}
               />
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-
-      {/* Modal for Popup */}
       <Modal
         open={isPopupOpen}
         onClose={closePopup}
@@ -82,7 +76,12 @@ const ImgModal = () => {
               className="w-full h-48 mx-auto rounded-lg"
             />
             <p className="mt-4 text-center text-lg font-semibold">{popupData.name}</p>
-            <p className="mt-2 text-center">{popupData.description}</p>
+            <p className="mt-2 text-center text-gray-600">{popupData.description}</p>
+            <p className="mt-2 text-center text-gray-500">Available Quantity: {popupData.quantity}</p>
+            <div className="flex justify-center items-center mt-4">
+              <span className="text-green-500 text-sm font-semibold">Verified</span>
+              <CheckCircleIcon className="text-green-500 ml-2" />
+            </div>
             <Button
               variant="contained"
               color="primary"

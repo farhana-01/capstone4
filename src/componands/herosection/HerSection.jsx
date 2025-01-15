@@ -34,8 +34,8 @@ const HeroSection = () => {
         loop={true}
         navigation={true}
         autoplay={{
-          delay: 3000, // Time in milliseconds (3 seconds)
-          disableOnInteraction: false, // Ensures autoplay continues after user interaction
+          delay: 3000, 
+          disableOnInteraction: false, 
         }}
         modules={[Navigation, Autoplay]}
       >

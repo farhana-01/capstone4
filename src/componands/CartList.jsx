@@ -53,27 +53,27 @@ const CartList = (props) => {
     textDecoration: "none",
     fontSize: "18px",
     marginBottom: "10px",
-    
+
   };
   const buttonTexts = [
-    'Best Mobiles Under 10000', 'Best Mobiles Under 15000', 'Best Mobiles Under 20000', 'Best Mobiles Under 30000', 'Best Mobiles Under 40000', 
-    'Best Mobiles Under 50000', 'Best Mobiles Under 60000', 'Best Mobiles Under 70000', 'Best Mobiles Under 80000', 'Best Mobiles Under 90000', 
-    'Best Mobiles Under 10.0000', ' Best 5g Phones', 'Best Camera Phones', 'Best Selfie Camera Phones ', 'Best Pubg Mobiles', 
-    'Most Expensive Phones','Top 10 Fast Charging Mobiles','"Best Mobiles Of 2023'
+    'Best Mobiles Under 10000', 'Best Mobiles Under 15000', 'Best Mobiles Under 20000', 'Best Mobiles Under 30000', 'Best Mobiles Under 40000',
+    'Best Mobiles Under 50000', 'Best Mobiles Under 60000', 'Best Mobiles Under 70000', 'Best Mobiles Under 80000', 'Best Mobiles Under 90000',
+    'Best Mobiles Under 10.0000', ' Best 5g Phones', 'Best Camera Phones', 'Best Selfie Camera Phones ', 'Best Pubg Mobiles',
+    'Most Expensive Phones', 'Top 10 Fast Charging Mobiles', '"Best Mobiles Of 2023'
   ];
 
   return (
     <Drawer
-      anchor="left" 
+      anchor="left"
       open={open}
       onClose={toggleDrawer(false)}
       PaperProps={{
         sx: { width: 350, backgroundColor: "#f7f7f7", padding: "16px 0" },
       }}
     >
-    
+
       <Box
-      
+
         sx={{
           display: "flex",
           justifyContent: "space-between",
@@ -82,60 +82,54 @@ const CartList = (props) => {
           backgroundColor: "#4dacf5",
         }}
       ><Typography
-      variant="h6"
-      style={{
-        color: "white",
-        display: "flex", 
-        alignItems: "center", 
-      }}
-    >
-      
-
-      <div style={{ marginTop: "10px" }}>
-      <a
-        href="/"  
+        variant="h6"
         style={{
-          display: "flex", 
+          color: "white",
+          display: "flex",
           alignItems: "center",
-          textDecoration: "none",  
         }}
       >
-        <img
-          src="https://static.priceoye.pk/images/logo.svg"
-          alt="Logo"
-          style={{
-            width: '94px', 
-            height: '94px', 
-            marginRight: '8px', 
-          }}
-        />
-        <IconButton onClick={toggleDrawer(false)} style={{ color: "white" }}>
-          <Close />
-        </IconButton>
-      </a>
-      <a href="/account" style={linkStyle}>
-          <AccountCircle style={{ marginRight: "8px" }} /> My Account
-        </a>
-        <a href="/about" style={linkStyle}>
-          <LocalShipping style={{ marginRight: "8px" }} /> Track My Order
-        </a>
-        <a href="/services" style={linkStyle}>
-          <ReportProblem style={{ marginRight: "8px" }} /> Launch a Complaint
-        </a>
-        <a href="/contact" style={linkStyle}>
-          <Notifications style={{ marginRight: "8px" }} /> Notifications
-        </a>
-        <a href="/blog" style={linkStyle}>
-          <ExitToApp style={{ marginRight: "8px" }} /> Logout
-        </a>
-      </div>
-      
-    </Typography>
+          <div style={{ marginTop: "10px" }}>
+            <a
+              href="/"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                textDecoration: "none",
+              }}
+            >
+              <img
+                src="https://static.priceoye.pk/images/logo.svg"
+                alt="Logo"
+                style={{
+                  width: '94px',
+                  height: '94px',
+                  marginRight: '8px',
+                }}
+              />
+              <IconButton onClick={toggleDrawer(false)} style={{ color: "white" }}>
+                <Close />
+              </IconButton>
+            </a>
+            <a href="/account" style={linkStyle}>
+              <AccountCircle style={{ marginRight: "8px" }} /> My Account
+            </a>
+            <a href="/about" style={linkStyle}>
+              <LocalShipping style={{ marginRight: "8px" }} /> Track My Order
+            </a>
+            <a href="/services" style={linkStyle}>
+              <ReportProblem style={{ marginRight: "8px" }} /> Launch a Complaint
+            </a>
+            <a href="/contact" style={linkStyle}>
+              <Notifications style={{ marginRight: "8px" }} /> Notifications
+            </a>
+            <a href="/blog" style={linkStyle}>
+              <ExitToApp style={{ marginRight: "8px" }} /> Logout
+            </a>
+          </div>
+
+        </Typography>
       </Box>
-
-
-      
-      
       <Typography
         variant="subtitle1"
         style={{
@@ -169,28 +163,27 @@ const CartList = (props) => {
 
       <Divider />
       <Box sx={{ textAlign: "start" }}>
-      {/* Loop to create 16 buttons with different text */}
-      {buttonTexts.map((text, index) => (
-        <Button
-          key={index}
-          variant="outlined" 
-          color="gray-200"
-          sx={{
-            borderColor: "gray-200", 
-            color: "gray-200", 
-            backgroundColor: "transparent", 
-            margin: "8px", 
-            "&:hover": {
-              backgroundColor: "primary.main", 
-              color: "white", 
-              borderColor: "primary.main", 
-            },
-          }}
-        >
-          {text} 
-        </Button>
-      ))}
-    </Box>
+        {buttonTexts.map((text, index) => (
+          <Button
+            key={index}
+            variant="outlined"
+            color="gray-200"
+            sx={{
+              borderColor: "gray-200",
+              color: "gray-200",
+              backgroundColor: "transparent",
+              margin: "8px",
+              "&:hover": {
+                backgroundColor: "primary.main",
+                color: "white",
+                borderColor: "primary.main",
+              },
+            }}
+          >
+            {text}
+          </Button>
+        ))}
+      </Box>
     </Drawer>
   );
 };

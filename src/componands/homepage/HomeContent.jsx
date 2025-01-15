@@ -36,15 +36,13 @@ const HomeContent = () => {
     <Mobiles />
     <ShopPrice />
     <BrandSection />
-    <ReviewCards />
     <ImgModal />
+    <ReviewCards />
     <ReasonToBuySection />
     <Trimer />
     <InlineImagesSection />
     <Footer />
    </div>
-    
-  
     </React.Fragment>
   );
 };

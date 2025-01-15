@@ -32,18 +32,30 @@ function ReasonToBuySection() {
   return (
     <Box
       sx={{
-        padding: "20px",
+        padding: { xs: "10px", sm: "20px", md: "30px" },
         width: "100%",
+        boxSizing: "border-box",
       }}
     >
-      <Typography variant="h6" sx={{ marginBottom: "15px", textAlign: "left" }}>
+      <Typography
+        variant="h6"
+        sx={{
+          marginBottom: "20px",
+          textAlign: { xs: "center", sm: "left" },
+          fontSize: { xs: "18px", sm: "20px" },
+        }}
+      >
         Reason to Buy
       </Typography>
+
       <Box
         sx={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: "15px",
+          display: "grid",
+          gridTemplateColumns: {
+            xs: "1fr",
+            sm: "repeat(2, 1fr)",
+          },
+          gap: "20px",
           justifyContent: "center",
         }}
       >
@@ -53,55 +65,62 @@ function ReasonToBuySection() {
             sx={{
               display: "flex",
               alignItems: "center",
-              gap: "50px",
+              gap: "35px", 
               backgroundColor: "#0073e6",
-              borderRadius: "8px",
+              borderRadius: "10px",
               padding: "15px",
               color: "#fff",
-              boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-              width: {
-                xs: "100%", // Full width on extra small screens
-                sm: "48%", // Half width on small screens
-                md: "31%", // One-third width on medium screens
-              },
-              minWidth: "450px",
+              boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
             }}
           >
-            {/* Image */}
             <img
               src={item.image}
               alt={item.title}
               style={{
-                width: "100px",
-                height: "100px",
+                width: "140px", 
+                height: "140px", 
                 flexShrink: 0,
+                objectFit: "contain",
               }}
             />
-            {/* Text Content */}
+
             <Box
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                gap: "5px",
                 flex: 1,
               }}
             >
-              <Typography variant="subtitle2" sx={{ fontWeight: "bold" }}>
+              <Typography
+                variant="subtitle2"
+                sx={{
+                  fontWeight: "bold",
+                  fontSize: { xs: "16px", sm: "18px" },
+                  marginBottom: "5px", 
+                }}
+              >
                 {item.title}
               </Typography>
-              <Typography
-                variant="body2"
-                sx={{ marginBottom: "5px", fontSize: "12px" }}
-              >
-                {item.description}
-              </Typography>
+              {item.description && (
+                <Typography
+                  variant="body2"
+                  sx={{
+                    fontSize: { xs: "14px", sm: "16px" },
+                  }}
+                >
+                  {item.description}
+                </Typography>
+              )}
               <Button
                 variant="contained"
                 sx={{
                   backgroundColor: "#ff9900",
                   alignSelf: "start",
-                  fontSize: "12px",
-                  padding: "5px 10px",
+                  fontSize: { xs: "12px", sm: "14px" },
+                  padding: "8px 16px",
+                  textTransform: "none",
+                  boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.2)",
+                  marginTop: "10px", 
                 }}
               >
                 {item.buttonText}

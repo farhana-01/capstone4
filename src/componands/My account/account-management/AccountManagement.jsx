@@ -11,14 +11,12 @@ import { Link } from "react-router-dom";
 const AccountManagement = () => {
   return (
     <>
-      {/* Top boxes */}
       <Box className="md:flex md:items-center">
         <Box className=" bg-white md:w-1/2 m-5 p-7">
           <Typography sx={{ fontSize: "18px", paddingBottom: "25px" }}>
             My orders
           </Typography>
           <Box className="flex items-center justify-between flex-wrap gap-10 md:gap-14 lg:gap-5">
-            {/* 1 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -27,8 +25,6 @@ const AccountManagement = () => {
               />
               <Typography>Pay</Typography>
             </Box>
-
-            {/* 2 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -37,8 +33,6 @@ const AccountManagement = () => {
               />
               <Typography>Receive</Typography>
             </Box>
-
-            {/* 3 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -47,8 +41,6 @@ const AccountManagement = () => {
               />
               <Typography>Review</Typography>
             </Box>
-
-            {/* 4 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -57,8 +49,6 @@ const AccountManagement = () => {
               />
               <Typography>Refund</Typography>
             </Box>
-
-            {/* 5 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -67,8 +57,6 @@ const AccountManagement = () => {
               />
               <Typography>Complaints</Typography>
             </Box>
-
-            {/* 6 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -85,7 +73,6 @@ const AccountManagement = () => {
             Help
           </Typography>
           <Box className="flex items-center lg:justify-between justify-start flex-wrap gap-10 md:gap-14 lg:gap-5">
-            {/* 1 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -94,8 +81,6 @@ const AccountManagement = () => {
               />
               <Typography>FAQs</Typography>
             </Box>
-
-            {/* 2 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -104,8 +89,6 @@ const AccountManagement = () => {
               />
               <Typography>Open Parcel</Typography>
             </Box>
-
-            {/* 3 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -114,8 +97,6 @@ const AccountManagement = () => {
               />
               <Typography>Contact</Typography>
             </Box>
-
-            {/* 4 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -124,8 +105,6 @@ const AccountManagement = () => {
               />
               <Typography>Locations</Typography>
             </Box>
-
-            {/* 5 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -144,7 +123,6 @@ const AccountManagement = () => {
             Services
           </Typography>
           <Box className="flex items-center justify-between flex-wrap gap-10 md:gap-14 lg:gap-5">
-            {/* 1 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -153,8 +131,6 @@ const AccountManagement = () => {
               />
               <Typography>Support</Typography>
             </Box>
-
-            {/* 2 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -163,8 +139,6 @@ const AccountManagement = () => {
               />
               <Typography>Warranty</Typography>
             </Box>
-
-            {/* 3 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -183,7 +157,6 @@ const AccountManagement = () => {
             Profile
           </Typography>
           <Box className="flex items-center justify-between flex-wrap gap-10 md:gap-14 lg:gap-5 md:w-[52%]">
-            {/* 1 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"
@@ -193,7 +166,6 @@ const AccountManagement = () => {
               <Typography>Address Book</Typography>
             </Box>
 
-            {/* 2 */}
             <Box className="flex flex-col justify-center items-center gap-2 cursor-pointer">
               <img
                 className="w-10"

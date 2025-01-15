@@ -54,7 +54,6 @@ const Sellar = () => {
 
           <Box>
             <Box className="flex flex-col md:flex-row gap-4">
-              {/* card 1 */}
               <Box className="bg-white w-full lg:w-[49%] !h-[270px] py-7 px-5 rounded-md">
                 <Box className="flex justify-between">
                   <Typography className="!text-sm !font-semibold">
@@ -93,8 +92,6 @@ const Sellar = () => {
                   </Typography>
                 </Box>
               </Box>
-
-              {/* card 2 */}
 
               <Box className="bg-white w-full lg:w-[49%] !h-[270px] py-7 px-5 rounded-md">
                 <Box className="flex justify-between">
@@ -137,7 +134,6 @@ const Sellar = () => {
             </Box>
 
             <Box className="flex flex-col md:flex-row gap-4 mt-4">
-              {/* card 3*/}
 
               <Box className="bg-white w-full lg:w-[49%] !h-[270px]  py-7 px-5 rounded-md">
                 <Box className="flex justify-between">
@@ -177,8 +173,6 @@ const Sellar = () => {
                   </Typography>
                 </Box>
               </Box>
-
-              {/* card 4 */}
 
               <Box className="bg-white w-full lg:w-[49%] !h-[270px] py-7 px-5 rounded-md">
                 <Box className="flex justify-between">

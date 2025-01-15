@@ -118,8 +118,6 @@ const MobileDetaile = () => {
       rating: 4.6,
       reviews: 14,
     },
-    
-    // Add other products here...
   ];
 
   const product = products.find((item) => item.id === parseInt(id));

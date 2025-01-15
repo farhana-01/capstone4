@@ -18,7 +18,6 @@ const ProductDetail = () => {
       rating: 5.0,
       reviews: 17,
     },
-    // Add other products here...
   ];
 
   const product = products.find((item) => item.id === parseInt(id));

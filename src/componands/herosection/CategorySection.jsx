@@ -6,11 +6,7 @@ import trimmer from "../..//../src/componands/assits/trimmers-shaver.svg";
 import powerbanks from "../..//../src/componands/assits/power-banks.svg";
 import chargers from "../..//../src/componands/assits/mobile-chargers.svg";
 import speakers from "../..//../src/componands/assits/bluetooth-speakers.svg";
-import tablets from "../..//../src/componands/assits/tablets.svg";
-
-
-
-// Category Section Component
+import tablets from "../..//../src/componands/assits/tablets.svg"
 const CategorySection = () => {
   const categories = [
     { name: "Mobiles", image: mobiles },

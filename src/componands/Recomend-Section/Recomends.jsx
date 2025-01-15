@@ -3,9 +3,9 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/navigation"; // Ensure you have these styles imported
+import "swiper/css/navigation"; 
 
-import { Pagination, Navigation } from "swiper/modules"; // Import modules
+import { Pagination, Navigation } from "swiper/modules"; 
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
@@ -145,7 +145,7 @@ const ProductWithMedia = () => {
   ];
 
   return (
-     <Box className="!w-full !py-20 lg:mt-0 pt">
+    <Box className="!w-full !py-20 lg:mt-0 pt">
       <Box className="text-center mb-8 mt-80">
         <Typography className="!text-xl !font-semibold text-[#3a3b3a]">
           Loved and Recommended
@@ -154,13 +154,12 @@ const ProductWithMedia = () => {
           Influencers talk about priceoye as a trusted brand
         </Typography>
       </Box>
-
       <Swiper
         slidesPerView={4}
         spaceBetween={30}
-        pagination={{ clickable: true }} // Enable pagination
-        navigation // Enable navigation buttons
-        modules={[Pagination, Navigation]} // Include modules
+        pagination={{ clickable: true }} 
+        navigation
+        modules={[Pagination, Navigation]} 
         className="mySwiper container mx-auto !px-3"
       >
         {product.map((item) => (
@@ -168,10 +167,10 @@ const ProductWithMedia = () => {
             key={item.id}
             className="bg-white rounded-2xl !w-60 cursor-pointer drop-shadow-md"
           >
-            <Box className="flex flex-col justify-center items-center ">
-              <Box className="text-center">
+            <Box className="flex flex-col justify-between items-center h-[550px]">
+              <Box className="text-center relative">
                 <video
-                  className="relative object-cover rounded-t-2xl"
+                  className="relative object-cover rounded-t-2xl h-[300px] w-[350px]"
                   autoPlay
                   muted
                   loop
@@ -179,10 +178,12 @@ const ProductWithMedia = () => {
                   alt={item.title}
                 />
                 <img
-                  className="w-20 lg:w-24 bg-white p-3 absolute left-[30%] bottom-[27%] drop-shadow-md rounded-lg"
+                  className="w-24 lg:w-28 bg-white p-3 absolute left-[50%] bottom-[-30px] transform -translate-x-2/4 drop-shadow-md rounded-lg"
                   src={item.image}
                   alt={item.title}
                 />
+
+
               </Box>
               <Box className="flex flex-col items-start gap-3 mt-4 w-60 text-start p-4">
                 <Tooltip

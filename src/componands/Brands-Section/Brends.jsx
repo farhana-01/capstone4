@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Box, Button, Typography, Container } from "@mui/material";
 
 function BrandSection() {
   const brandImages = [
@@ -16,67 +16,76 @@ function BrandSection() {
   ];
 
   return (
-    <Box className="bg-gray-200" sx={{ padding: "20px 0", marginTop: "40px" }}>
-      <Container>
-        {/* Header Section */}
+    <Container sx={{ padding: "20px 0", marginTop: "40px" }}>
+      {/* Header Section */}
+      <Box
+        sx={{
+          maxWidth: "100%",
+          padding: { xs: "0 10px", sm: "0 20px", md: "0 40px" },
+          marginBottom: "30px",
+        }}
+      >
         <Box
           sx={{
             display: "flex",
-            justifyContent: "space-around",
+            justifyContent: "space-between",
             alignItems: "center",
-            marginBottom: "30px",
           }}
         >
           <Typography variant="h5" sx={{ fontWeight: "bold" }}>
             Shop by Brand
           </Typography>
           <Button
-            className="!text-black !bg-white !hover:text-slate-300 !capitalize"
             variant="contained"
+            sx={{
+              backgroundColor: "#fff",
+              color: "#000",
+              textTransform: "capitalize",
+              "&:hover": { backgroundColor: "#e0e0e0", color: "#555" },
+            }}
           >
             View All
           </Button>
         </Box>
-
-        {/* Brand Logos Section */}
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            overflowX: "auto", // Enables horizontal scrolling if needed
-            whiteSpace: "nowrap", // Ensures items stay on one line
-            gap: "10px",
-          }}
-        >
-          {brandImages.map((brand, index) => (
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-between", 
+          gap: "20px",
+          padding: "0 20px", 
+        }}
+      >
+        {brandImages.map((brand, index) => (
+          <Box
+            key={index}
+            sx={{
+              textAlign: "center",
+              flex: "1 1 calc(10% - 20px)", 
+              maxWidth: "10%", 
+              minWidth: "80px", 
+            }}
+          >
             <Box
-              key={index}
+              component="img"
+              src={brand.src}
+              alt={`Brand ${brand.name}`}
               sx={{
-                textAlign: "center", // Centers the text under each image
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
+                width: "100%", 
+                height: "auto",
               }}
+            />
+            <Typography
+              variant="body2"
+              sx={{ marginTop: "8px", fontSize: "14px" }}
             >
-              <Box
-                component="img"
-                src={brand.src}
-                alt={`Brand ${brand.name}`}
-                sx={{
-                  width: "60px", // Adjust width of each image
-                  height: "auto",
-                  flexShrink: 0, // Prevents images from shrinking
-                }}
-              />
-              <Typography variant="body2" sx={{ marginTop: "8px", fontSize: "14px" }}>
-                {brand.name}
-              </Typography>
-            </Box>
-          ))}
-        </Box>
-      </Container>
-    </Box>
+              {brand.name}
+            </Typography>
+          </Box>
+        ))}
+      </Box>
+    </Container>
   );
 }
 

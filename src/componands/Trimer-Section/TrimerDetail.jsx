@@ -120,8 +120,6 @@ const TrimerDetail = () => {
       rating: 4.6,
       reviews: 14,
     },
-    
-    // Add other products here...
   ];
 
 console.log(products,'product');

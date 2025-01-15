@@ -7,8 +7,8 @@ import { Grid, Navigation } from "swiper/modules";
 import { Box, Button, Typography } from "@mui/material";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./Trimer.css"
-import {useNavigate} from "react-router-dom"
+import "./Trimer.css";
+import { useNavigate } from "react-router-dom";
 
 const Trimer = () => {
   const products = [
@@ -35,98 +35,97 @@ const Trimer = () => {
       reviews: 38,
     },
     {
-    id: 3,
-    image:
-      "https://images.priceoye.pk/kemei-3-in-1-rechargeable-electric-shaver-trimmer-km-6332-pakistan-priceoye-l0abn-270x270.webp",
-    title: "KEMEI 3 In 1 Rechargeable Electric Shaver & Trimmer KM-6332",
-    currentPrice: 13499,
-    originalPrice: 20000,
-    discountPercentage: 33,
-    rating: 4.5,
-    reviews: 5,
-  },
-  {
-    id: 4,
-    image:
-      "https://images.priceoye.pk/vgr-stainless-steel-blade-trimmer-v-031-pakistan-priceoye-qyjpu-270x270.webp",
-    title: "VGR Stainless Steel Blade Trimmer - V-031",
-    currentPrice: 4611,
-    originalPrice: 7199,
-    discountPercentage: 36,
-    rating: 4.7,
-    reviews: 30,
-  },
-  {
-    id: 5,
-    image:
-      "https://images.priceoye.pk/kemei-km-6331-3-in-1-grooming-kit-with-usb-charging-pakistan-priceoye-v2fgq-270x270.webp",
-    title: "Kemei KM-6331 3 in 1 Grooming Kit with USB Charging",
-    currentPrice: 10518,
-    originalPrice: 14000,
-    discountPercentage: 25,
-    rating: 4.6,
-    reviews: 13,
-  },
-  {
-    id: 6,
-    image:
-      "https://images.priceoye.pk/remington-pilot-personal-groomer-kit-pg180-pakistan-priceoye-i31xi-270x270.webp",
-    title: "REMINGTON Pilot Personal Groomer Kit PG180",
-    currentPrice: 49799,
-    originalPrice: 69999,
-    discountPercentage: 29,
-    rating: 4.7,
-    reviews: 7,
-  },
+      id: 3,
+      image:
+        "https://images.priceoye.pk/kemei-3-in-1-rechargeable-electric-shaver-trimmer-km-6332-pakistan-priceoye-l0abn-270x270.webp",
+      title: "KEMEI 3 In 1 Rechargeable Electric Shaver & Trimmer KM-6332",
+      currentPrice: 13499,
+      originalPrice: 20000,
+      discountPercentage: 33,
+      rating: 4.5,
+      reviews: 5,
+    },
+    {
+      id: 4,
+      image:
+        "https://images.priceoye.pk/vgr-stainless-steel-blade-trimmer-v-031-pakistan-priceoye-qyjpu-270x270.webp",
+      title: "VGR Stainless Steel Blade Trimmer - V-031",
+      currentPrice: 4611,
+      originalPrice: 7199,
+      discountPercentage: 36,
+      rating: 4.7,
+      reviews: 30,
+    },
+    {
+      id: 5,
+      image:
+        "https://images.priceoye.pk/kemei-km-6331-3-in-1-grooming-kit-with-usb-charging-pakistan-priceoye-v2fgq-270x270.webp",
+      title: "Kemei KM-6331 3 in 1 Grooming Kit with USB Charging",
+      currentPrice: 10518,
+      originalPrice: 14000,
+      discountPercentage: 25,
+      rating: 4.6,
+      reviews: 13,
+    },
+    {
+      id: 6,
+      image:
+        "https://images.priceoye.pk/remington-pilot-personal-groomer-kit-pg180-pakistan-priceoye-i31xi-270x270.webp",
+      title: "REMINGTON Pilot Personal Groomer Kit PG180",
+      currentPrice: 49799,
+      originalPrice: 69999,
+      discountPercentage: 29,
+      rating: 4.7,
+      reviews: 7,
+    },
+    {
+      id: 7,
+      image:
+        "https://images.priceoye.pk/realme-watch-pakistan-priceoye-g61ky-270x270.webp",
+      title: "REMINGTON Pilot Personal Groomer Kit PG180",
+      currentPrice: 5499,
+      originalPrice: 6000,
+      discountPercentage: 8,
+      rating: 5.0,
+      reviews: 1,
+    },
+    {
+      id: 8,
+      image:
+        "https://images.priceoye.pk/dinglong-professional-beard-and-hair-trimmer-rf-609-pakistan-priceoye-gu6ki-270x270.webp",
+      title: "Kemei 7 in 1 Grooming Kit Shaving Machine Set KM-580",
+      currentPrice: 4999,
+      originalPrice: 10500,
+      discountPercentage: 52,
+      rating: 4.8,
+      reviews: 11,
+    },
+    {
+      id: 9,
+      image:
+        "https://images.priceoye.pk/kemei-7-in-1-grooming-kit-shaving-machine-set-km-580-pakistan-priceoye-xu1d2-270x270.webp",
+      title: "Dingling Professional Rf 608B",
+      currentPrice: 3811,
+      originalPrice: 9990,
+      discountPercentage: 62,
+      rating: 4.8,
+      reviews: 537,
+    },
+    {
+      id: 10,
+      image:
+        "https://images.priceoye.pk/dingling-professional-rf-608b-pakistan-priceoye-47iad-270x270.webp",
+      title: "Kemei KM-6330 Hair & Beard Trimmer 3 in 1",
+      currentPrice: 3899,
+      originalPrice: 6999,
+      discountPercentage: 44,
+      rating: 4.6,
+      reviews: 14,
+    },
+  ];
 
-  {
-    id: 7,
-    image:
-      "	https://images.priceoye.pk/realme-watch-pakistan-priceoye-g61ky-270x270.webp",
-    title: "REMINGTON Pilot Personal Groomer Kit PG180",
-    currentPrice: 5499,
-    originalPrice: 6000,
-    discountPercentage: 8,
-    rating: 5.0,
-    reviews: 1,
-  },
-  {
-    id: 8,
-    image:
-      "	https://images.priceoye.pk/dinglong-professional-beard-and-hair-trimmer-rf-609-pakistan-priceoye-gu6ki-270x270.webp",
-    title: "Kemei 7 in 1 Grooming Kit Shaving Machine Set KM-580",
-    currentPrice: 4999,
-    originalPrice: 10500,
-    discountPercentage: 52,
-    rating: 4.8,
-    reviews: 11,
-  },
-  {
-    id: 9,
-    image:
-      "https://images.priceoye.pk/kemei-7-in-1-grooming-kit-shaving-machine-set-km-580-pakistan-priceoye-xu1d2-270x270.webp",
-    title: "Dingling Professional Rf 608B",
-    currentPrice: 3811,
-    originalPrice: 9990,
-    discountPercentage: 62,
-    rating: 4.8,
-    reviews: 537,
-  },
-  {
-    id: 10,
-    image:
-      "https://images.priceoye.pk/dingling-professional-rf-608b-pakistan-priceoye-47iad-270x270.webp",
-    title: "Kemei KM-6330 Hair & Beard Trimmer 3 in 1",
-    currentPrice: 3899,
-    originalPrice: 6999,
-    discountPercentage: 44,
-    rating: 4.6,
-    reviews: 14,
-  },
-  
-];
+  const navigate = useNavigate();
 
- const navigate = useNavigate();
   return (
     <>
       <Box
@@ -140,7 +139,7 @@ const Trimer = () => {
       >
         <Box className="container mx-auto pt-7 mb:pt-16 pb-7 flex justify-between items-center px-3">
           <Typography className="text-white" variant="h5">
-          Latest Trimmers Shaver
+            Latest Trimmers Shaver
           </Typography>
           <Button
             className="!text-black !bg-white !hover:text-slate-300 !capitalize"
@@ -170,7 +169,14 @@ const Trimer = () => {
             >
               <Box className="flex flex-col justify-center items-center !mt-5">
                 <Box className="text-center">
-                  <img className="w-28" src={item.image} alt={item.title} onClick={()=>{navigate(`/trimer-Detail/${item?.id}`)}} />
+                  <img
+                    className="w-full max-w-[100px] lg:max-w-[120px] h-[70px] lg:h-[90px] mx-auto"
+                    src={item.image}
+                    alt={item.title}
+                    onClick={() => {
+                      navigate(`/trimer-Detail/${item?.id}`);
+                    }}
+                  />
                   <Box className="flex items-center bg-[#FBF7EB] px-2 rounded-full relative -left-16 -top-2">
                     <Typography className="!text-sm">
                       <FontAwesomeIcon
